@@ -1,0 +1,16 @@
+.input {
+    color: var(--white);    
+
+    height: 35px;    
+
+    cursor: auto;
+
+    border: 1px solid var(--white);
+       
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .input::placeholder {
+    color: var(--silver);
+  }

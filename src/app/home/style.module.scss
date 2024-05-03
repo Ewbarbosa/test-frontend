@@ -1,0 +1,57 @@
+.container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 25px;
+
+  button {
+    margin: 10px;
+  }
+}
+
+.content {
+  width: 80%;
+  height: 80vh;
+  margin: 25px 0;
+  border-radius: 0.5rem;
+  border: 4px solid var(--silver);
+
+  overflow:auto;  
+}
+
+.table {
+  width: auto;
+  padding: 10px;
+  text-align: center;  
+  border-radius: 0.5rem;  
+}
+
+.thead {
+  background-color: var(--blue);
+
+  th {
+    padding: 5px;
+  }
+}
+
+.tr {
+  
+  td {
+    padding: 5px;
+    white-space: nowrap; // quebra de linha    
+  }
+}
+
+.btEditar {
+  height: 30px;
+  background-color: var(--blue);
+  border: none;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;  
+  border-radius: 0.3rem;
+}

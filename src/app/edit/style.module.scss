@@ -1,0 +1,53 @@
+.container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: 40px 0;
+
+  overflow: hidden;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;  
+
+  padding: 20px;
+
+  width: 500px;  
+
+  overflow: hidden;
+  /* oculta o scroll vertical */
+
+  input {
+    margin: 5px 0;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+
+  width: 462px;
+  height: auto;
+
+  button {
+    width: 462px;
+  }
+}
+
+.btDelete {
+  height: 35px;
+  margin: 10px 0;
+  background-color: brown;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

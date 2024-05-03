@@ -1,0 +1,42 @@
+.container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: 40px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  width: 500px;
+
+  overflow-y: hidden;
+  /* oculta o scroll vertical */
+
+  input {
+    margin: 5px 0;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+
+  width: 462px;
+  height: 30px;
+
+  button {
+    width: 462px;
+  }
+}

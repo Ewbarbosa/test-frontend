@@ -3,8 +3,6 @@ import style from './style.module.scss';
 
 import axios from 'axios';
 
-import { Header } from '@/components/Header';
-
 import { useState, useEffect } from 'react';
 
 interface ListProps {
@@ -42,9 +40,7 @@ export default function View() {
 
       const list = res.data;
 
-      const listAtivo = list.filter((list: ListProps) => list.status === 'Ativo');
-
-      resolve(listAtivo);
+      resolve(list);
     })
   }
 
@@ -68,46 +64,39 @@ export default function View() {
   const [atendimento, setAtendimento] = useState('');
 
   return (
-    <>
-      <Header />
+    <div className={style.container}>
 
-      <div className={style.container}>
+      <h2>Profissionais Disponíveis</h2>
 
+      <div className={style.content}>
+        <table className={style.table}>
+          <thead className={style.table}>
+            <tr>
+              <th>CFM</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th>Valor Hora</th>
+              <th>Atende em</th>
+              <th>Atendimento</th>
+            </tr>
+          </thead>
+          <tbody>
 
-
-        <h2>Profissionais Disponíveis</h2>
-
-        <div className={style.content}>
-          <table className={style.table}>
-            <thead className={style.table}>
-              <tr>
-                <th>CFM</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Telefone</th>
-                <th>Valor Hora</th>
-                <th>Atende em</th>
-                <th>Atendimento</th>
+            {list.map(item => (
+              <tr key={item.id} className={style.tr}>
+                <td>{item.cfm}</td>
+                <td>{item.nomecompleto}</td>
+                <td>{item.email}</td>
+                <td>{item.telefone}</td>
+                <td>{item.valor}</td>
+                <td>{item.regiao}</td>
+                <td>{item.atendimento}</td>
               </tr>
-            </thead>
-            <tbody>
-
-              {list.map(item => (
-                <tr key={item.id} className={style.tr}>
-                  <td>{item.cfm}</td>
-                  <td>{item.nomecompleto}</td>
-                  <td>{item.email}</td>
-                  <td>{item.telefone}</td>
-                  <td>{item.valor}</td>
-                  <td>{item.regiao}</td>
-                  <td>{item.atendimento}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
-    </>
-
+    </div>
   )
 }
